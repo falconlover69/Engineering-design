@@ -1,0 +1,60 @@
+{
+  "users": [
+    {
+      "role": "admin",
+      "name": "admin",
+      "email": "admin@mail.ru",
+      "phone_number": "hui",
+      "password": "sasipisuanepassword",
+      "id": 1
+    },
+    {
+      "role": "admin",
+      "name": "hui",
+      "email": "admin@mail.ru",
+      "phone_number": "hui",
+      "password": "sasipisuanepassword",
+      "id": 2
+    },
+    {
+      "email": "greg@mail.ru",
+      "password": "$2a$10$w1.Fm.3KPYChJXd/0kHc2OllIs.J1nOra3nWdfBfELXjzNzzh8v7u",
+      "name": "greg",
+      "role": "user",
+      "phone_number": "123",
+      "id": 3
+    },
+    {
+      "email": "lui@mail.ru",
+      "password": "$2a$10$/BiKZEJ4zV37.pPh.lO2AOsrYFXCENMeeEvDH7WJA0XK7UNhHvYCi",
+      "name": "lui",
+      "role": "lui",
+      "phone_number": "lui",
+      "id": 4
+    },
+    {
+      "email": "a@mail.ru",
+      "password": "$2a$10$UPqBKXb10d6ri1uMaQCdfu8.hFhOPdMnjq7hwLR9Z7vGwlzc8961i",
+      "name": "a",
+      "role": "a",
+      "phone_number": "a",
+      "id": 5
+    },
+    {
+      "email": "b@mail.ru",
+      "password": "$2a$10$f1XkA9S4HtbP5NkDtXcpZum9bE9JC0o3g/eA/etYxIsX6T3wAHOci",
+      "name": "b",
+      "role": "b",
+      "phone_number": "b",
+      "id": 6
+    },
+    {
+      "email": "c@mail.ru",
+      "password": "$2a$10$5LU31Ox0XPacGjGqb7gzxuw19jdJsk5DQf2F0GWoab5Gl2gg0C1xm",
+      "name": "c",
+      "role": "c",
+      "phone_number": "c",
+      "id": 7
+    }
+  ]
+}
