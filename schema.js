@@ -25,7 +25,7 @@ const UserType = new GraphQLObjectType({
     })
 })
 
-const ComplaintsType = new GraphQLObjectType({
+const ComplaintType = new GraphQLObjectType({
     name: 'Complaint',
     fields: () => ({
         id: {type: GraphQLInt},
@@ -98,6 +98,71 @@ const RootQuery = new GraphQLObjectType({
             },
             resolve(parent, args) {
                 return axios.get('http://localhost:3000/users/' + args.id)
+                    .then(res => res.data)
+            }
+        },
+        products: {
+            type: new GraphQLList(ProductType),
+            resolve(parent, args) {
+                return axios.get('http://localhost:3000/products')
+                    .then(res => res.data)
+            }
+        },
+        product: {
+            type: ProductType,
+            args: {
+                id: {type: new GraphQLNonNull(GraphQLString)}
+            },
+            resolve(parent, args) {
+                return axios.get('http://localhost:3000/products/' + args.id)
+                    .then(res => res.data)
+            }
+        },
+        orders: {
+            type: new GraphQLList(OrderType),
+            resolve(parent, args) {
+                return axios.get('http://localhost:3000/orders')
+                    .then(res => res.data)
+            }
+        },
+        order: {
+            type: OrderType,
+            args: {
+                id: {type: new GraphQLNonNull(GraphQLString)}
+            },
+            resolve(parent, args) {
+                return axios.get('http://localhost:3000/orders/' + args.id)
+                    .then(res => res.data)
+            }
+        },
+        complaints: {
+            type: new GraphQLList(ComplaintType),
+            resolve(parent, args) {
+                return axios.get('http://localhost:3000/complaint')
+                    .then(res => res.data)
+            }
+        },
+        complaint: {
+            type: ComplaintType,
+            args: {
+                id: {type: new GraphQLNonNull(GraphQLString)}
+            },
+            resolve(parent, args) {
+                return axios.get('http://localhost:3000/complaint/' + args.id)
+                    .then(res => res.data)
+            }
+        },
+        category: {
+            type: CategoryType,
+            resolve(parent, args) {
+                return axios.get('http://localhost:3000/category')
+                    .then(res => res.data)
+            }
+        },
+        alert: {
+            type: AlertType,
+            resolve(parent, args) {
+                return axios.get('http://localhost:3000/alerts')
                     .then(res => res.data)
             }
         }
