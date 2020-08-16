@@ -56,5 +56,54 @@
       "phone_number": "c",
       "id": 7
     }
+  ],
+
+  "orders": [
+    {
+      "id": "1",
+      "user_id": "1",
+      "product_id": "1",
+      "user_name": "admin",
+      "date": "1597601002",
+      "product_price": "550"
+    }
+  ],
+
+  "complaints": [
+    {
+      "id": "1",
+      "product_id": "1",
+      "user_id": "1",
+      "text": "продукт хуйня",
+      "name": "микроволновка не микроволновит",
+      "status": "в разработке"
+    }
+  ],
+
+  "products": [
+    {
+      "id": "1",
+      "product_category": "1",
+      "name": "микроволновка",
+      "price": "550",
+      "description": "хуёвая микроволновка",
+      "manufactured_country": "Россия",
+      "feature": "микроволновит"
+    }
+  ],
+
+  "categoryes": [
+    {
+      "id": "1",
+      "message": "Мткроволновки"
+    }
+  ],
+
+  "alerts": [
+    {
+      "id": "1",
+      "message": "Неверный логин или пароль",
+      "type": "404 - Not found"
+    }
   ]
 }

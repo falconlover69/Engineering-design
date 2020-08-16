@@ -46,7 +46,7 @@ const ProductType = new GraphQLObjectType({
         price: {type: GraphQLInt},
         description: {type: GraphQLString},
         manufactured_country: {type: GraphQLString},
-        feature: {type: GraphQLString}
+        feature: {type: GraphQLString},
     })
 })
 

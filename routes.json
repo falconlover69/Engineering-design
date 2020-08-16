@@ -1,4 +1,10 @@
 {
-  "/users*": "/660/users$1",
-  "/messages*": "/640/messages$1"
+  "/users*": "/444/users$1",
+  "/auth*": "/444/auth$1",
+  "/register*": "/444/register$1",
+  "/products*": "/444/products$1",
+  "/orders*": "/444/orders$1",
+  "/complaint*": "/444/complaint$1",
+  "/category*": "/444/category$1",
+  "/alerts*": "/444/alerts$1"
 }
