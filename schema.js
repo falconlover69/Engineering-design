@@ -47,6 +47,7 @@ const ProductType = new GraphQLObjectType({
         description: {type: GraphQLString},
         manufactured_country: {type: GraphQLString},
         feature: {type: GraphQLString},
+        image: {type: GraphQLString}
     })
 })
 
@@ -55,7 +56,7 @@ const OrderType = new GraphQLObjectType({
     fields: () => ({
         id: {type: GraphQLInt},
         user_id: {type: GraphQLString},
-        product_id: {type: GraphQLList},
+        product_id: {type: GraphQLString},
         user_name: {type: GraphQLInt},
         date: {type: GraphQLString},
         product_price: {type: GraphQLString}
@@ -103,7 +104,18 @@ const RootQuery = new GraphQLObjectType({
         },
         products: {
             type: new GraphQLList(ProductType),
+            args: {
+                manufactured_country: {type: GraphQLString},
+                price: {type: GraphQLInt},
+                sort: {type: GraphQLString},
+                page: {type: GraphQLString},
+                limit: {type: GraphQLInt}
+            },
             resolve(parent, args) {
+                if(args.limit){
+                    return axios.get('http://localhost:3000/products?limit=' + args.limit)
+                    .then(res => res.data)
+                } 
                 return axios.get('http://localhost:3000/products')
                     .then(res => res.data)
             }
@@ -153,9 +165,9 @@ const RootQuery = new GraphQLObjectType({
             }
         },
         category: {
-            type: CategoryType,
+            type: new GraphQLList(CategoryType),
             resolve(parent, args) {
-                return axios.get('http://localhost:3000/category')
+                return axios.get('http://localhost:3000/categoryes')
                     .then(res => res.data)
             }
         },
