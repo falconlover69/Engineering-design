@@ -57,9 +57,10 @@ const OrderType = new GraphQLObjectType({
         id: {type: GraphQLInt},
         user_id: {type: GraphQLString},
         product_id: {type: GraphQLString},
-        user_name: {type: GraphQLInt},
+        user_name: {type: GraphQLString},
         date: {type: GraphQLString},
-        product_price: {type: GraphQLString}
+        product_price: {type: GraphQLString},
+        status: {type: GraphQLBoolean}
     })
 })
 
@@ -85,6 +86,17 @@ const AlertType = new GraphQLObjectType({
 const RootQuery = new GraphQLObjectType({
     name: 'RootQuery',
     fields: {
+        signup: {
+            type: UserType,
+            args: {
+                email: {type: new GraphQLNonNull(GraphQLString)},
+                password: {type: new GraphQLNonNull(GraphQLString)}
+            },
+            resolve(parent, args) {
+                return axios.post('http://localhost:3000/signup',{email: args.email,password: args.password})
+                    .then(res => res.data)
+            }
+        },
         users: {
             type: new GraphQLList(UserType),
             resolve(parent, args) {

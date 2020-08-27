@@ -3,7 +3,7 @@
     {
       "role": "admin",
       "name": "admin",
-      "email": "admin@mail.ru",
+      "email": "admin1@mail.ru",
       "phone_number": "hui",
       "password": "sasipisuanepassword",
       "id": 1
@@ -60,18 +60,46 @@
 
   "orders": [
     {
-      "id": "1",
+      "id": 1,
       "userId": "1",
       "productId": "1",
       "user_name": "admin",
       "date": "1597601002",
-      "product_price": "550"
+      "product_price": "550",
+      "status": true
+    },
+    {
+      "id": 2,
+      "userId": "1",
+      "productId": "1",
+      "user_name": "admin",
+      "date": "1597601002",
+      "product_price": "550",
+      "status": true
+    },
+    {
+      "id": 3,
+      "userId": "1",
+      "productId": "1",
+      "user_name": "admin",
+      "date": "1597601002",
+      "product_price": "550",
+      "status": false
+    },
+    {
+      "id": 4,
+      "userId": "1",
+      "productId": "1",
+      "user_name": "admin",
+      "date": "1597601002",
+      "product_price": "550",
+      "status": true
     }
   ],
 
   "complaints": [
     {
-      "id": "1",
+      "id": 1,
       "productId": "1",
       "userId": "1",
       "text": "продукт хуйня",
@@ -83,7 +111,7 @@
   "products": [
     {
       "categoryId": "1",
-      "id": "1",
+      "id": 1,
       "name": "микроволновка тупая",
       "price": "1000",
       "description": "хуёвая микроволновка",
@@ -93,7 +121,7 @@
     },
     {
       "categoryId": "1",
-      "id": "2",
+      "id": 2,
       "name": "микроволновка умная",
       "price": "550",
       "description": "хуёвая микроволновка",
@@ -103,7 +131,7 @@
     },
     {
       "categoryId": "1",
-      "id": "3",
+      "id": 3,
       "name": "микроволновка так себе",
       "price": "250",
       "description": "хуёвая микроволновка",
@@ -113,7 +141,7 @@
     },
     {
       "categoryId": "1",
-      "id": "4",
+      "id": 4,
       "name": "микроволновка под пивко пойдёт",
       "price": "50",
       "description": "хуёвая микроволновка",
@@ -123,7 +151,7 @@
     },
     {
       "categoryId": "3",
-      "id": "5",
+      "id": 5,
       "name": "микроволновка x`hn t` lthb",
       "price": "50",
       "description": "хуёвая микроволновка",
@@ -135,30 +163,30 @@
 
   "categoryes": [
     {
-      "id": "1",
+      "id": 1,
       "message": "microwaves"
     },
     {
-      "id": "2",
+      "id": 2,
       "message": "irons"
     },
     {
-      "id": "3",
+      "id": 3,
       "message": "refrigerators"
     },
     {
-      "id": "4",
+      "id": 4,
       "message": "ovens"
     },
     {
-      "id": "5",
+      "id": 5,
       "message": "mixer"
     }
   ],
 
   "alerts": [
     {
-      "id": "1",
+      "id": 1,
       "message": "Неверный логин или пароль",
       "type": "404 - Not found"
     }
