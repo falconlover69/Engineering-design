@@ -89,11 +89,12 @@ const RootQuery = new GraphQLObjectType({
         signup: {
             type: UserType,
             args: {
+                accessToken: {type: new GraphQLNonNull(GraphQLString)},
                 email: {type: new GraphQLNonNull(GraphQLString)},
                 password: {type: new GraphQLNonNull(GraphQLString)}
             },
             resolve(parent, args) {
-                return axios.post('http://localhost:3000/signup',{email: args.email,password: args.password})
+                return axios.post('http://localhost:3000/signup',{email: args.email,password: args.password},{headers: {'Authorization': args.accessToken}})
                     .then(res => res.data)
             }
         },
@@ -152,7 +153,7 @@ const RootQuery = new GraphQLObjectType({
         order: {
             type: OrderType,
             args: {
-                id: {type: new GraphQLNonNull(GraphQLString)}
+                id: {type: new GraphQLNonNull(GraphQLInt)}
             },
             resolve(parent, args) {
                 return axios.get('http://localhost:3000/orders/' + args.id)
@@ -162,17 +163,17 @@ const RootQuery = new GraphQLObjectType({
         complaints: {
             type: new GraphQLList(ComplaintType),
             resolve(parent, args) {
-                return axios.get('http://localhost:3000/complaint')
+                return axios.get('http://localhost:3000/complaints')
                     .then(res => res.data)
             }
         },
         complaint: {
             type: ComplaintType,
             args: {
-                id: {type: new GraphQLNonNull(GraphQLString)}
+                id: {type: new GraphQLNonNull(GraphQLInt)}
             },
             resolve(parent, args) {
-                return axios.get('http://localhost:3000/complaint/' + args.id)
+                return axios.get('http://localhost:3000/complaints/' + args.id)
                     .then(res => res.data)
             }
         },
