@@ -122,12 +122,15 @@ const RootQuery = new GraphQLObjectType({
                 price: {type: GraphQLInt},
                 sort: {type: GraphQLString},
                 page: {type: GraphQLString},
-                limit: {type: GraphQLInt}
+                limit: {type: GraphQLInt},
+                category: {type: GraphQLString}
             },
             resolve(parent, args) {
-                if(args.limit){
-                    return axios.get('http://localhost:3000/products?limit=' + args.limit)
-                    .then(res => res.data)
+                if(args.category){
+                    return axios.get('http://localhost:3000/categoryes?message=' + args.category)
+                    .then(res => {
+                        axios.get('http://localhost:3000/products?categoryId=' + res.data[0].id)
+                    })
                 } 
                 return axios.get('http://localhost:3000/products')
                     .then(res => res.data)
