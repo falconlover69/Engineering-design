@@ -1,10 +1,11 @@
 {
-  "/users*": "/444/users$1",
-  "/auth*": "/444/auth$1",
-  "/register*": "/444/register$1",
+  "/users*": "/664/users$1",
+  "/auth*": "/664/auth$1",
+  "/register*": "/664/register$1",
   "/products*": "/644/products$1",
-  "/orders*": "/444/orders$1",
-  "/complaint*": "/444/complaint$1",
-  "/category*": "/444/category$1",
-  "/alerts*": "/444/alerts$1"
+  "/orders*": "/664/orders$1",
+  "/complaint*": "/664/complaint$1",
+  "/category*": "/664/category$1",
+  "/alerts*": "/664/alerts$1",
+  "/admin*": "/664/admin$1"
 }

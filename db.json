@@ -20,7 +20,7 @@
       "email": "greg@mail.ru",
       "password": "$2a$10$w1.Fm.3KPYChJXd/0kHc2OllIs.J1nOra3nWdfBfELXjzNzzh8v7u",
       "name": "greg",
-      "role": "user",
+      "role": "admin",
       "phone_number": "123",
       "id": 3
     },
@@ -36,7 +36,7 @@
       "email": "a@mail.ru",
       "password": "$2a$10$UPqBKXb10d6ri1uMaQCdfu8.hFhOPdMnjq7hwLR9Z7vGwlzc8961i",
       "name": "a",
-      "role": "a",
+      "role": "admin",
       "phone_number": "a",
       "id": 5
     },
@@ -79,20 +79,27 @@
       "phone_number": "+7",
       "role": "operator",
       "id": 10
+    },
+    {
+      "email": "hui1@mail.ru",
+      "password": "$2a$10$UNvEynN71Uhw4xGez7oyDuJWlmmcTZ7u3fKM9P.DVYbDHgae6cgRG",
+      "name": "hui",
+      "phone_number": "hui1",
+      "role": "operator",
+      "id": 11
+    },
+    {
+      "email": "hui2@mail.ru",
+      "password": "$2a$10$VK1r15YaIfpxf2BI.4iHGuLbfMq58R6U5mFPXIJot7fWlRE2P5w62",
+      "name": "hui2",
+      "phone_number": "hui2",
+      "role": "operator",
+      "id": 12
     }
   ],
   "orders": [
     {
       "id": 1,
-      "userId": "1",
-      "productId": "1",
-      "user_name": "admin",
-      "date": "1976-04-19T12:59-0500",
-      "product_price": "550",
-      "status": true
-    },
-    {
-      "id": 2,
       "userId": "1",
       "productId": "1",
       "user_name": "admin",
@@ -123,10 +130,10 @@
     {
       "id": 1,
       "productId": "1",
-      "userId": "1",
       "text": "продукт хуйня",
       "name": "микроволновка не микроволновит",
-      "status": "в разработке"
+      "status": true,
+      "date": "1976-04-19T12:59-0500"
     }
   ],
   "products": [
@@ -206,7 +213,7 @@
   "alerts": [
     {
       "id": 1,
-      "message": "Неверный логин или пароль",
+      "message": "Такой страницы нет :(",
       "type": "404 - Not found"
     },
     {
@@ -226,8 +233,33 @@
     },
     {
       "id": 5,
-      "message": "Неверный логин или пароль",
-      "type": "404 - Not found"
+      "message": "Заказ изменён",
+      "type": "200 - OK"
+    },
+    {
+      "id": 6,
+      "message": "Жалоба изменён",
+      "type": "200 - OK"
+    },
+    {
+      "id": 7,
+      "message": "Заказ удалён",
+      "type": "200 - OK"
+    },
+    {
+      "id": 8,
+      "message": "Жалоба удалена",
+      "type": "200 - OK"
+    },
+    {
+      "id": 9,
+      "message": "Пользователь зарегестрирован",
+      "type": "200 - OK"
+    },
+    {
+      "id": 10,
+      "message": "Жалоба удалена",
+      "type": "200 - OK"
     }
   ]
 }

@@ -30,10 +30,10 @@ const ComplaintType = new GraphQLObjectType({
     fields: () => ({
         id: {type: GraphQLInt},
         product_id: {type: GraphQLString},
-        user_id: {type: GraphQLString},
         text: {type: GraphQLString},
         name: {type: GraphQLString},
-        status: {type: GraphQLString}
+        status: {type: GraphQLBoolean},
+        date: {type: GraphQLString}
     })
 })
 
@@ -189,8 +189,11 @@ const RootQuery = new GraphQLObjectType({
         },
         alert: {
             type: AlertType,
+            args: {
+                id: {type: new GraphQLNonNull(GraphQLInt)}
+            },
             resolve(parent, args) {
-                return axios.get('http://localhost:3000/alerts')
+                return axios.get('http://localhost:3000/alerts/' + args.id)
                     .then(res => res.data)
             }
         }
