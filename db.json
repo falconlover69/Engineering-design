@@ -9,14 +9,6 @@
       "id": 1
     },
     {
-      "role": "admin",
-      "name": "hui",
-      "email": "admin@mail.ru",
-      "phone_number": "hui",
-      "password": "sasipisuanepassword",
-      "id": 2
-    },
-    {
       "email": "greg@mail.ru",
       "password": "$2a$10$w1.Fm.3KPYChJXd/0kHc2OllIs.J1nOra3nWdfBfELXjzNzzh8v7u",
       "name": "greg",
