@@ -5,10 +5,9 @@
   "main": "server.js",
   "scripts": {
     "server": "nodemon server.js",
-    "start": "node server.js",
     "client": "npm start --prefix client",
     "json-server": "json-server --watch db.json -m ./node_modules/json-server-auth -r routes.json",
-    "dev": "concurrently \"npm run server\" \"npm run client\" \"npm run json-server\" "
+    "start": "concurrently \"npm run server\" \"npm run client\" \"npm run json-server\" "
   },
   "author": "Greg",
   "license": "MIT",
